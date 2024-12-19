@@ -1,0 +1,7 @@
+.vscode
+
+media/
+__pycashe__
+migrations/
+db.sqlite3
+venv

@@ -1,0 +1,313 @@
+{% extends 'base.html' %} {% load static %} {% block details %}
+
+<section>
+    <div class="container">
+        <div class="detail-image-price">
+            
+            <div class="detail-image">
+                <h1>{{ shop.name }}</h1>
+            <p>Артикул {{ shop.articul}}</p>
+                <img src="{{ shop.image.url }}" alt="" class="big-img">
+                <div class="detail_mini">
+                 
+                   
+
+                    <img src="{% static 'assets/svg/detail1.svg'%}" alt="">
+                    <img src="{% static 'assets/svg/detail2.svg'%}" alt="">
+                    <img src="{% static 'assets/svg/detail3.svg'%}" alt="">
+                    <img src="{% static 'assets/svg/detail4.svg'%}" alt="">
+
+                    
+                </div>
+
+            </div>
+
+            <div class="detail-price">
+                <h3>{{ shop.price }} </h3>
+                <div class="detail-size">
+                    <h4>ВЫБЕРИТЕ РАЗМЕР</h4>
+                    <div class="choose-size">
+                        <p>40 EUR <br>(25 см)</p>
+                        <p>41 EUR <br>(26 см)</p>
+                        <p>42 EUR <br>(26.5 см)</p>
+                        <p>43 EUR <br>(27.5 см)</p>
+                        <p>44 EUR <br>(28 см)</p>
+                        <p>45 EUR <br>(29 см)</p>
+                        <p></p>
+                    </div>
+                </div>
+
+                <div class="size_button_white">
+                  <button>КАК ОПРЕДЕЛИТЬ РЕЗМЕР?</button>
+                </div>
+                <div class="size_button_red">
+                  <button>В корзину</button>
+                </div>
+                <div class="size_button_blue">
+                  <button>Купить сейчас</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section><div class="container">
+    <nav class="detail-menu">
+        <a href="#" class="active">Описание</a>
+        <a href="#">Оплата и доставка</a>
+        <a href="#">Обмен и возврат</a>
+        <a href="#">Гарантии</a>
+        <a href="#">О товаре</a>
+    </nav>
+
+    <div class="detail-description">
+        <p class="detail_des">{{ shop.description}}</p>
+
+        <div class="detail-product1">
+            <p>Категория</p>
+            <p>Бренд</p>
+            <p>Категория</p>
+            <p>Разноцветный</p>
+
+        </div>
+        <div class="detail-product">
+            <p>{{ shop.category}}</p>
+            <p>{{shop.brand}}</p>
+            <p>{{shop.season}}</p>
+            <p>Разноцветный</p>
+
+        </div>
+    </div>
+</div></section>
+
+<section class="detail-section">
+    <div class="container">
+      <div class="assorted_product">
+        <h2>Вам может понравится</h2>
+
+        <div class="slider">
+          <input type="radio" name="slider" id="slide1" checked />
+          <input type="radio" name="slider" id="slide2" />
+          <input type="radio" name="slider" id="slide3" />
+          <input type="radio" name="slider" id="slide4" />
+          <input type="radio" name="slider" id="slide5" />
+
+          <!-- Слайды -->
+          <div class="slides">
+            <div class="slide">
+              <div class="card">
+                
+                <img src="{% static 'assets/svg/good1.svg'%}" alt="Товар 1" />
+                <h3>{Сланцы Adidas Yeezy Slide}</h3>
+                <p>Артикул 19566</p>
+                <div class="price">
+                  <p>3290 ₽</p>
+                  <img src="{% static 'assets/svg/like.svg'%}" alt="" />
+                </div>
+              </div>
+              <div class="card">
+                <img src="{% static 'assets/svg/good2.svg'%}" alt="Товар 2" />
+                <h3>Кроссовки Adidas EQT</h3>
+                <p>Артикул 19566</p>
+                <div class="price">
+                  <p>3290 ₽</p>
+                  <img src="{% static 'assets/svg/like.svg'%}" alt="" />
+                </div>
+              </div>
+              <div class="card">
+                <img src="{% static 'assets/svg/good3.svg'%}" alt="Товар 3" />
+                <h3>Кроссовки Adidas EQT</h3>
+                <p>Артикул 19566</p>
+                <div class="price">
+                  <p>3290 ₽</p>
+                  <img src="{% static 'assets/svg/like.svg'%}" alt="" />
+                </div>
+              </div>
+              <div class="card">
+                <img src="{% static 'assets/svg/good4.svg'%}" alt="Товар 4" />
+                <h3>Кроссовки Adidas Alphabounce</h3>
+                <p>Артикул 19566</p>
+                <div class="price">
+                  <p>3290 ₽</p>
+                  <img src="{% static 'assets/svg/like.svg'%}" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="card">
+                <img src="{% static 'assets/svg/good1.svg'%}" alt="Товар 1" />
+                <h3>Сланцы Adidas Yeezy Slide</h3>
+                <p>Артикул 19566</p>
+                <div class="price">
+                  <p>3290 ₽</p>
+                  <img src="{% static 'assets/svg/like.svg'%}" alt="" />
+                </div>
+              </div>
+              <div class="card">
+                <img src="{% static 'assets/svg/good2.svg'%}" alt="Товар 2" />
+                <h3>Кроссовки Adidas EQT</h3>
+                <p>Артикул 19566</p>
+                <div class="price">
+                  <p>3290 ₽</p>
+                  <img src="{% static 'assets/svg/like.svg'%}" alt="" />
+                </div>
+              </div>
+              <div class="card">
+                <img src="{% static 'assets/svg/good3.svg'%}" alt="Товар 3" />
+                <h3>Кроссовки Adidas EQT</h3>
+                <p>Артикул 19566</p>
+                <div class="price">
+                  <p>3290 ₽</p>
+                  <img src="{% static 'assets/svg/like.svg'%}" alt="" />
+                </div>
+              </div>
+              <div class="card">
+                <img src="{% static 'assets/svg/good4.svg'%}" alt="Товар 4" />
+                <h3>Кроссовки Adidas Alphabounce</h3>
+                <p>Артикул 19566</p>
+                <div class="price">
+                  <p>3290 ₽</p>
+                  <img src="{% static 'assets/svg/like.svg'%}" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="card">
+                <img src="{% static 'assets/svg/good1.svg'%}" alt="Товар 1" />
+                <h3>Сланцы Adidas Yeezy Slide</h3>
+                <p>Артикул 19566</p>
+                <div class="price">
+                  <p>3290 ₽</p>
+                  <img src="{% static 'assets/svg/like.svg'%}" alt="" />
+                </div>
+              </div>
+              <div class="card">
+                <img src="{% static 'assets/svg/good2.svg'%}" alt="Товар 2" />
+                <h3>Кроссовки Adidas EQT</h3>
+                <p>Артикул 19566</p>
+                <div class="price">
+                  <p>3290 ₽</p>
+                  <img src="{% static 'assets/svg/like.svg'%}" alt="" />
+                </div>
+              </div>
+              <div class="card">
+                <img src="{% static 'assets/svg/good3.svg'%}" alt="Товар 3" />
+                <h3>Кроссовки Adidas EQT</h3>
+                <p>Артикул 19566</p>
+                <div class="price">
+                  <p>3290 ₽</p>
+                  <img src="{% static 'assets/svg/like.svg'%}" alt="" />
+                </div>
+              </div>
+              <div class="card">
+                <img src="{% static 'assets/svg/good1.svg'%}" alt="Товар 4" />
+                <h3>Кроссовки Adidas Alphabounce</h3>
+                <p>Артикул 19566</p>
+                <div class="price">
+                  <p>3290 ₽</p>
+                  <img src="{% static 'assets/svg/like.svg'%}" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="card">
+                <img src=".{% static 'assets/svg/good1.svg'%}" alt="Товар 1" />
+                <h3>Сланцы Adidas Yeezy Slide</h3>
+                <p>Артикул 19566</p>
+                <div class="price">
+                  <p>3290 ₽</p>
+                  <img src="{% static 'assets/svg/like.svg'%}" alt="" />
+                </div>
+              </div>
+              <div class="card">
+                <img src="{% static 'assets/svg/good1.svg'%}" alt="Товар 2" />
+                <h3>Кроссовки Adidas EQT</h3>
+                <p>Артикул 19566</p>
+                <div class="price">
+                  <p>3290 ₽</p>
+                  <img src=".{% static 'assets/svg/like.svg'%}" alt="" />
+                </div>
+              </div>
+              <div class="card">
+                <img src="{% static 'assets/svg/good1.svg'%}" alt="Товар 3" />
+                <h3>Кроссовки Adidas EQT</h3>
+                <p>Артикул 19566</p>
+                <div class="price">
+                  <p>3290 ₽</p>
+                  <img src="{% static 'assets/svg/like.svg'%}" alt="" />
+                </div>
+              </div>
+              <div class="card">
+                <img src="{% static 'assets/svg/good4.svg'%}" alt="Товар 4" />
+                <h3>Кроссовки Adidas Alphabounce</h3>
+                <p>Артикул 19566</p>
+                <div class="price">
+                  <p>3290 ₽</p>
+                  <img src="{% static 'assets/svg/like.svg'%}" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="{% static 'assets/svg/good1.svg'%}" alt="Товар 1" />
+                <h3>Сланцы Adidas Yeezy Slide</h3>
+                <p>Артикул 19566</p>
+                <div class="price">
+                  <p>3290 ₽</p>
+                  <img src="{% static 'assets/svg/like.svg'%}" alt="" />
+                </div>
+              </div>
+              <div class="card">
+                <img src="{% static 'assets/svg/good2.svg'%}" alt="Товар 2" />
+                <h3>Кроссовки Adidas EQT</h3>
+                <p>Артикул 19566</p>
+                <div class="price">
+                  <p>3290 ₽</p>
+                  <img src="{% static 'assets/svg/like.svg'%}" alt="" />
+                </div>
+              </div>
+              <div class="card">
+                <img src="{% static 'assets/svg/good1.svg'%}" alt="Товар 3" />
+                <h3>Кроссовки Adidas EQT</h3>
+                <p>Артикул 19566</p>
+                <div class="price">
+                  <p>3290 ₽</p>
+                  <img src="{% static 'assets/svg/like.svg'%}" alt="" />
+                </div>
+              </div>
+              <div class="card">
+                <img src="{% static 'assets/svg/good1.svg'%}" alt="Товар 4" />
+                <h3>Кроссовки Adidas Alphabounce</h3>
+                <p>Артикул 19566</p>
+                <div class="price">
+                  <p>3290 ₽</p>
+                  <img src="{% static 'assets/svg/like.svg'%}" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="arrows">
+            <label for="slide1" class="arrownav left"
+              ><img src="./assets/svg/arrow-left.svg" alt=""
+            /></label>
+            <label for="slide2" class="arrownav right"
+              ><img src="./assets/svg/arrow-right.svg   " alt=""
+            /></label>
+          </div>
+
+          <!-- Точки для навигации -->
+          <div class="navigation">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+            <label for="slide5"></label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    
+
+{% endblock details %}

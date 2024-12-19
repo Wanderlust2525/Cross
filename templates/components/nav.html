@@ -1,0 +1,125 @@
+
+{% load static %}
+<header>
+    <div class="header_top">
+      <p>Только три дня скидка <span>-30%</span> на всё!</p>
+    </div>
+
+    
+    <div class="container">
+      
+      <img class="header_logo" src="{% static 'assets/svg/logo.svg'%}" alt="" />
+      <div class="header_cart">
+        <div class="phone_mail">
+          <div class="phone-mail">
+            <img src="{% static 'assets/svg/phone.svg'%}" alt="" />
+            <p>+7 951 999 28 34</p>
+          </div>
+          <div class="phone-mail">
+            <img src="{% static 'assets/svg/mail.svg'%}" alt="" />
+            <p>info@stageboxbrand.ru</p>
+          </div>
+        </div>
+        <div class="logo">
+          <img src="{% static 'assets/svg/logo.svg'%}" alt="" />
+        </div>
+        <div class="cart_favorite">
+          <img class="img1" src="{% static 'assets/svg/cart.svg'%}" alt="" />
+          <a  aria-current="page" href="{% url 'workspace' %}"><img class="img2" src="{% static 'assets/svg/account.svg' %}" alt="" /></a>
+          <img class="img3" src="{% static 'assets/svg/favorites.svg'%}" alt="" />
+        </div>
+      </div>
+
+      
+      <div class="header_navbar">
+        <div class="navbar">
+          <nav>
+            <ul>
+              {% for type in types %}
+                <li>
+                    <a href="{% url 'all_product'%}?type={{ type.id }}">{{ type.name }}</a>
+                </li>
+              {% endfor %}  
+             
+            </ul>
+          </nav>
+        </div>
+
+        <form class="input_form" action = "{% url 'all_product' %}" method= "get">
+          <input placeholder="Поиск" type="search" name="search" value = "{{ request.GET.search }}" aria-label="Search" />
+          <button type="submit">
+            <img src="{% static 'assets/svg/search.svg'%}" alt="" />
+          </button>
+        </form>
+
+        
+      </div>
+    </div>
+
+    <div class="menu_header">
+      <div class="menu_button">
+        <p>Меню</p>
+        <input type="checkbox" id="burger-toggle" hidden />
+
+        <label for="burger-toggle" class="burger-icon">
+          <img src="{% static 'assets/svg/menu.svg'%}" alt="" />
+        </label>
+
+        <!-- Панель меню -->
+        <div class="menu-panel">
+          <nav class="menu">
+            <div class="dropdown">
+              <input
+                type="checkbox"
+                id="dropdown_toggle"
+                class="dropdown_toggle"
+              />
+              <label for="dropdown_toggle" class="dropbtn">Кроссовки</label>
+              <ul class="dropdown_content">
+                <li><a href="">Мужские</a></li>
+                <li><a href="">Женские</a></li>
+                <li><a href="">Детские</a></li>
+              </ul>
+            </div>
+            <div class="dropdown">
+              <input
+                type="checkbox"
+                id="dropdown_toggle"
+                class="dropdown_toggle"
+              />
+              <label for="dropdown_toggle" class="dropbtn">Одежда</label>
+            </div>
+            <div class="dropdown">
+              <input
+                type="checkbox"
+                id="dropdown_toggle"
+                class="dropdown_toggle"
+              />
+              <label for="dropdown_toggle" class="dropbtn">Аксессуары</label>
+            </div>
+            <div class="dropdown">
+              <input
+                type="checkbox"
+                id="dropdown_toggle"
+                class="dropdown_toggle"
+              />
+              <label for="dropdown_toggle" class="dropbtn">Блог</label>
+            </div>
+            <div class="dropdown">
+              <input
+                type="checkbox"
+                id="dropdown_toggle"
+                class="dropdown_toggle"
+              />
+              <label for="dropdown_toggle" class="dropbtn">Отзывы</label>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <input type="checkbox" id="search_toggle" hidden />
+      <div class="search_button">
+        <img src="{% static 'assets/svg/search.svg' %}" alt="" />
+        <p>Найти</p>
+      </div>
+    </div>  
+  </header>

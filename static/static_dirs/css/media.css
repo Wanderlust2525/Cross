@@ -1,0 +1,387 @@
+            @media(max-width:1000px) {
+                .container {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+                .cart_favorite {
+                    margin-top: 10px;
+                }
+                .navbar {
+                    display: none;
+                }
+                .banner_left {
+                    margin-left: 90px;
+                }
+                .banner_left h1 {
+                    font-family: Montserrat;
+                    font-size: 48px;
+                    font-weight: 900;
+                }
+                .banner_right {
+                    margin-top: -180px;
+                }
+                .banner_image {
+                    margin-top: -350px;
+                }
+                .banner_right img {
+                    width: 450px;
+                }
+                .banner_image img {
+                    width: 360px;
+                }
+                .card {
+                    max-width: 230px;
+                    width: 100%;
+                }
+                .blog_container_right {
+                    max-width: 500px;
+                    width: 100%;
+                    margin-left: 10px;
+                }
+                .brands_logo {
+                    flex-wrap: wrap;
+                }
+                .blog_container_left {
+                    flex-wrap: wrap;
+                }
+                .first_button>img {
+                    width: 70px;
+                    margin-right: -60px;
+                }
+                .arrow {
+                    display: none;
+                }
+                .second_button img {
+                    width: 70px;
+                    margin-right: -60px;
+                }
+                .footer_input {
+                    display: none;
+                }
+                .slides {
+                    width: 1000%;
+                    /* Слайдов будет в два раза больше по ширине */
+                }
+                .slide {
+                    width: 50%;
+                    /* Каждый слайд занимает 50% ширины */
+                }
+                /* Переключение слайдов для адаптивного режима */
+                #slide1:checked~.slides {
+                    transform: translateX(0);
+                }
+                #slide2:checked~.slides {
+                    transform: translateX(-20%);
+                }
+                #slide3:checked~.slides {
+                    transform: translateX(-40%);
+                }
+                #slide4:checked~.slides {
+                    transform: translateX(-60%);
+                }
+                #slide5:checked~.slides {
+                    transform: translateX(-80%);
+                }
+                .all_product_container {
+                    margin-left: 20px;
+                    margin-right: 20px;
+                }
+                .filter_container {
+                    display: none;
+                }
+                .count {
+                    display: none;
+                }
+                .products {
+                    width: 100%;
+                }
+                .detail-price {
+                    display: none;
+                }
+                .detail-product1 {
+                    display: none;
+                }
+                .detail-product {
+                    display: none;
+                }
+                .detail-menu a {
+                    margin-left: 10px;
+                    font-size: 16px;
+                }
+            }
+            
+            @media(max-width:650px) {
+                .cart_favorite {
+                    margin-top: 10px;
+                }
+                .navbar {
+                    display: none;
+                }
+                .banner_right {
+                    margin-top: -180px;
+                }
+                .banner_image {
+                    margin-top: -150px;
+                }
+                .banner_right img {
+                    width: 250px;
+                }
+                .banner_image img {
+                    width: 160px;
+                }
+                .banner_left {
+                    margin-left: 20px;
+                }
+                .assorted_product h2 {
+                    font-family: Montserrat;
+                    font-size: 38px;
+                    font-weight: 700;
+                    color: rgba(0, 44, 106, 1);
+                    margin-top: 100px;
+                    margin-bottom: 60px;
+                }
+                .card {
+                    width: 50%;
+                    flex-wrap: wrap;
+                }
+                .footer_input {
+                    display: none;
+                }
+                .garant img {
+                    width: 100px;
+                    height: 100px;
+                }
+                .garant_section h3 {
+                    font-family: Montserrat;
+                    font-size: 26px;
+                    font-weight: 700;
+                    color: rgba(0, 44, 106, 1);
+                }
+                .footer_logo img {
+                    width: 80px;
+                    height: 80px;
+                }
+                .footer_logo {
+                    margin-top: -30px;
+                }
+                .phone_mail {
+                    margin-left: -50px;
+                }
+                .first_button button {
+                    font-family: Montserrat;
+                    font-size: 9px;
+                    font-weight: 900;
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                    padding-left: 110px;
+                    padding-right: 30px;
+                }
+                .second_button button {
+                    font-family: Montserrat;
+                    font-size: 9px;
+                    font-weight: 900;
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                    padding-left: 110px;
+                    padding-right: 30px;
+                }
+                .navigation label {
+                    margin: 8px 20px;
+                }
+                .detail-image h1 {
+                    font-size: 18px;
+                }
+                .detail-image img {
+                    display: none;
+                }
+            }
+            
+            @media(max-width:480px) {
+                .menu_header {
+                    display: flex;
+                    align-items: start;
+                    justify-content: space-between;
+                    margin-top: -110px;
+                }
+                .header_top p {
+                    font-family: Montserrat;
+                    font-size: 11px;
+                    font-weight: 700;
+                }
+                .header_top p span {
+                    font-family: Montserrat;
+                    font-size: 11px;
+                    font-weight: 700;
+                }
+                .header_logo {
+                    width: 50px;
+                    height: 50px;
+                }
+                .phone_mail {
+                    display: flex;
+                    margin-top: -60px;
+                    align-items: left;
+                    font-family: Ruda;
+                    font-size: 8px;
+                    font-weight: 400;
+                }
+                .header_cart {
+                    flex-direction: column;
+                }
+                .header_logo {
+                    display: block;
+                    margin-top: -15px;
+                    margin-left: 30px;
+                }
+                .logo {
+                    display: none;
+                }
+                .phone-mail img {
+                    display: none;
+                }
+                .phone-mail p {
+                    font-family: Ruda;
+                    font-size: 8px;
+                    font-weight: 400;
+                    color: rgba(41, 41, 45, 1);
+                    margin-left: 10px;
+                }
+                .menu_header {
+                    display: block;
+                    display: flex;
+                }
+                .input_form {
+                    display: none;
+                }
+                .banner_content h1 {
+                    font-family: Montserrat;
+                    font-size: 20px;
+                    font-weight: 900;
+                }
+                .banner_content p {
+                    font-family: Ruda;
+                    font-size: 11px;
+                    font-weight: 400;
+                    max-width: 112px;
+                    width: 100%;
+                }
+                .banner_left button {
+                    font-family: Montserrat;
+                    font-size: 13px;
+                    font-weight: 700;
+                    padding: 13px 20px;
+                }
+                .banner_right {
+                    margin-top: -180px;
+                }
+                .banner_image {
+                    margin-top: -150px;
+                }
+                .banner_right img {
+                    width: 250px;
+                }
+                .banner_image img {
+                    width: 160px;
+                }
+                .banner_left {
+                    margin-left: 20px;
+                }
+                .button_slider {
+                    margin-top: -125px;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+                .arrow {
+                    display: none;
+                }
+                .first_button button {
+                    font-family: Montserrat;
+                    font-size: 9px;
+                    font-weight: 900;
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                    padding-left: 110px;
+                    padding-right: 30px;
+                }
+                .first_button>img {
+                    width: 80px;
+                    margin-right: -70px;
+                }
+                .arrow {
+                    display: none;
+                }
+                .second_button button {
+                    font-family: Montserrat;
+                    font-size: 9px;
+                    font-weight: 900;
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                    padding-left: 110px;
+                    padding-right: 30px;
+                }
+                .second_button img {
+                    width: 80px;
+                    margin-right: -70px;
+                }
+                .banner_left button {
+                    margin-top: 100px;
+                    margin-left: 145px;
+                    margin-right: -178px;
+                }
+                .assorted_product h2 {
+                    max-width: 188px;
+                    width: 100%;
+                    font-size: 18px;
+                    margin-bottom: 5px;
+                }
+                .slide {
+                    width: 100%
+                }
+                .card {
+                    background: #fff;
+                    border-radius: 30px;
+                    box-shadow: 5px 20px 60px 0px rgba(22, 92, 191, 0.1);
+                    max-width: 155px;
+                    width: 100%;
+                    box-sizing: border-box;
+                    text-align: start;
+                    padding-bottom: 30px;
+                }
+                .slide {
+                    gap: 10px;
+                    /* Уменьшаем отступы */
+                }
+                .products .card {
+                    max-width: calc(50% - 10px);
+                    /* Каждая карточка занимает 50% ширины */
+                }
+                .card {
+                    max-width: calc(25% - 20px);
+                    /* Каждая карточка занимает 50% ширины */
+                }
+                .brands {
+                    display: none;
+                }
+                .garant h3 {
+                    font-family: Montserrat;
+                    font-size: 19px;
+                    font-weight: 700;
+                    color: rgba(0, 44, 106, 1);
+                    max-width: 86.24px;
+                    width: 100%;
+                }
+                .garant img {
+                    width: 30px;
+                    height: 30px;
+                }
+                .blog_container_left {
+                    flex-wrap: wrap;
+                }
+                .footer_logo img {
+                    width: 50px;
+                    height: 50px;
+                }
+                .footer_input {
+                    display: none;
+                }
+            }

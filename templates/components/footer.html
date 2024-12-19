@@ -1,0 +1,51 @@
+{% load static %}
+
+<footer>
+    <div class="container">
+        <div class="footer_container">
+
+            <div class="footer_logo"><img src="{% static "assets/svg/logo.svg" %}" alt=""></div>
+
+            <div class="footer_contact">
+
+                <div class="footer_link">
+                    <img src="{% static "assets/svg/instagram.svg" %}" alt="">
+                    <img src="{% static "assets/svg/vk.svg" %}" alt="">
+                    <img src="{% static "assets/svg/whatsapp.svg" %}" alt="">
+                </div>
+                <div class="phone_mail">
+                    <div class="phone-mail">
+                      <img src="{% static 'assets/svg/phone.svg'%}" alt="" />
+                      <p>+7 951 999 28 34</p>
+                </div>
+                    <div class="phone-mail">
+                      <img src="{% static 'assets/svg/mail.svg'%}" alt="" />
+                      <p>info@stageboxbrand.ru</p>
+                    </div>
+            </div>         
+            
+            
+
+        </div>
+
+        <div class="service">
+            <p>Доставка</p>
+            <p>Гарантии</p>
+            <p>Таблица размеров</p>
+            <p>Обмен и возврат</p>
+            <p>Вопросы и ответы</p>
+        </div> 
+        <div class="footer_input">
+            <div class="footer_cart">
+                <img src="{% static 'assets/svg/cart.svg'%}" alt="">
+                <img  class ="img2" src="{% static 'assets/svg/account.svg'%}" alt="">
+            </div>
+            <div class="input_form">
+                <input placeholder="Поиск" name="search" />
+                <button type="submit">
+                  <img src="{% static 'assets/svg/search.svg'%}" alt="" />
+                </button>
+            </div>
+        </div>
+    </div>
+</footer>

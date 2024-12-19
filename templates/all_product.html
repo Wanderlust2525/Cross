@@ -1,0 +1,220 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<section>
+  <div class="container">
+    <div class="all_product_container">
+      <div class="filter_container">
+        <div class="size">
+          <h3>Размер</h3>
+          <div class="number_size">
+            <div class="size1">
+              <p>30 EUR</p>
+              <p>31 EUR</p>
+              <p>32 EUR</p>
+              <p>33 EUR</p>
+              <p>34 EUR</p>
+            </div>
+            <div class="size1">
+              <p>35 EUR</p>
+              <p>36 EUR</p>
+              <p>37 EUR</p>
+              <p>38 EUR</p>
+              <p>39 EUR</p>
+              <p>40 EUR</p>
+            </div>
+            <div class="size1">
+              <p>41 EUR</p>
+              <p>42 EUR</p>
+              <p>43 EUR</p>
+              <p>44 EUR</p>
+              <p>45 EUR</p>
+              <p>46 EUR</p>
+            </div>
+          </div>
+        </div>
+        <div class="season_container">
+          <h3>Сезон</h3>
+
+          <div class="checkbox-container">
+            <input type="checkbox" class="custom-checkbox" id="winter" />
+            <label for="winter" class="checkbox-label">Зима</label>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" class="custom-checkbox" id="demiseason" />
+            <label for="demiseason" class="checkbox-label">Демисезон</label>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" class="custom-checkbox" id="summer" />
+            <label for="summer" class="checkbox-label">Лето</label>
+          </div>
+        </div>
+        <div class="price-container">
+          <h3>Цена</h3>
+
+          <div class="price-slider">
+            <p>590</p>
+            <p>8390</p>
+          </div>
+          <div class="line1"></div>
+          <div class="circle-middle"></div>
+          <div class="line2"></div>
+
+          <div class="circle-small"></div>
+        </div>
+
+        <div class="color_container">
+          <h3>Цвет</h3>
+          <div class="colors">
+            <div class="color-div black"></div>
+            <div class="color-div white"></div>
+            <div class="color-div pink"></div>
+            <div class="color-div red"></div>
+            <div class="color-div grey"></div>
+            <div class="color-div blue"></div>
+            <div class="color-div blue2"></div>
+            <div class="color-div purpule"></div>
+            <div class="color-div green"></div>
+            <div class="color-div green2"></div>
+            <div class="color-div yellow"></div>
+            <div class="color-div yellow2"></div>
+          </div>
+        </div>
+
+        <div class="category-container">
+          <h3>Категория</h3>
+
+          <div class="checkbox-container">
+            <input type="checkbox" class="custom-checkbox" id="backed" />
+            <label for="backed" class="checkbox-label">Баскетбол</label>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" class="custom-checkbox" id="run" />
+            <label for="run" class="checkbox-label">Бег</label>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" class="custom-checkbox" id="bot" />
+            <label for="bot" class="checkbox-label">Ботинки</label>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" class="custom-checkbox" id="cross" />
+            <label for="cross" class="checkbox-label">Кроссовки с мехом</label>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" class="custom-checkbox" id="sandal" />
+            <label for="sandal" class="checkbox-label">Сандалии и сланцы</label>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" class="custom-checkbox" id="sap" />
+            <label for="sap" class="checkbox-label">Сапоги</label>
+          </div>
+        </div>
+
+        <div class="brand-container">
+          <h3>Бренд</h3>
+
+          <div class="checkbox-container">
+            <input type="checkbox" class="custom-checkbox" id="Adidas" />
+            <label for="Adidas" class="checkbox-label">Adidas</label>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" class="custom-checkbox" id="McQueen" />
+            <label for="McQueen" class="checkbox-label"
+              >Alexander McQueen</label
+            >
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" class="custom-checkbox" id="Asics" />
+            <label for="Asics" class="checkbox-label">Asics</label>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" class="custom-checkbox" id="Balenciaga" />
+            <label for="Balenciaga" class="checkbox-label">Balenciaga</label>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" class="custom-checkbox" id="Caterpillar" />
+            <label for="Caterpillar" class="checkbox-label">Caterpillar</label>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" class="custom-checkbox" id="Columbia" />
+            <label for="Columbia" class="checkbox-label">Columbia</label>
+          </div>
+        </div>
+
+        <div class="button-container">
+          <button class="red-button">Применить</button>
+          <button class="grey-button">Отменить</button>
+        </div>
+      </div>
+
+      <div class="product_continer">
+        <div class="sort_count">
+          <div class="sorted">
+            <p>Сортировка</p>
+            <button>по умолчанию</button>
+          </div>
+
+          <div class="count">
+            <p>Количество</p>
+            <div class="redcircle">18</div>
+            <div class="whitecircle">30</div>
+            <div class="whitecircle">60</div>
+          </div>
+        </div>
+
+        <div class="products">
+          {% for product in shop %}
+          <div class="card">
+            {% if product.image %} 
+            <a href="{% url 'detail_shop' id=product.id %}">
+              <img src="{{ product.image.url }}" alt="{{ product.name }}" />
+            </a>
+
+            {% else %}
+            <p>Нет изображения</p>
+            {% endif %}
+            
+
+            <h3>{{ product.name }}</h3>
+            <p>{{ product.articul }}</p>
+            <div class="price">
+              <p>{{ product.price }}</p>
+              <img src="{% static 'assets/svg/like.svg' %}" alt="" />
+            </div>
+          </div>
+          {% empty %}
+          <h3>No products...</h3>
+          {% endfor %} 
+
+
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+    <div class="container"><div class="pagination">
+        {% if shop.has_previous or shop.has_next %}
+          <div class="pagination">
+            {% if shop.has_previous %}
+            <a href="?offset={{ shop.previous_page_number }}"> <img src="{% static './assets/svg/pagin_left.svg' %}" alt=""> </a>
+            {% endif %} {% for i in shop.paginator.page_range %} 
+            {% if shop.number == i %}
+            <span>{{ i }}</span>
+            {% else %}
+            <a href="?offset={{ i }}">{{ i }}</a>
+            {% endif %} 
+            {% endfor %} 
+            {% if shop.has_next %}
+            <a href="?offset={{ shop.next_page_number }}"> <img src="{% static './assets/svg/pagin_right.svg' %}" alt=""> </a>
+            {% endif %}
+          </div>
+          {% endif %}
+    </div></div>
+</section>
+
+
+
+{% endblock content %} 

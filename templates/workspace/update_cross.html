@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}| Update Cross{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <h2 class="update-cross">Добавить товар</h2>
+
+<form action="{% url 'update_cross' id=shop.id %}" method="POST" enctype="multipart/form-data" novalidate>
+    {% csrf_token %}
+    <div class="create-form">
+        {{ form }}
+    </div>
+    
+    <div class= "create_button">
+        <button type="submit" >Сохранить</button>
+    </div>
+</form>
+</div>
+
+{% endblock content %}

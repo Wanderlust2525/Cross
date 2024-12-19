@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% block title %}| Create Cross{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <h2 class="create-cross">Добавить товар</h2>
+
+<form action="{% url 'create_cross' %}" method="POST" enctype="multipart/form-data" novalidate >
+    {% csrf_token %}
+    <div class="create-form">
+        {{ form.name}}
+        {% for error in form.name.errors %}
+                <div class="text-danger">{{ error }}</div>
+        {% endfor %}
+    </div>
+    <div class="create-form">
+        {{ form.articul}}
+        {% for error in form.articul.errors %}
+                <div class="text-danger">{{ error }}</div>
+        {% endfor %}
+    </div>
+    <div class="create-form">
+        {{ form.price}}
+        {% for error in form.price.errors %}
+                <div class="text-danger">{{ error }}</div>
+        {% endfor %}
+    </div>
+    <div class="create-form">
+        {{ form.image}}
+        {% for error in form.image.errors %}
+                <div class="text-danger">{{ error }}</div>
+        {% endfor %}
+    </div>
+    
+    <div class="create-form">
+        {{ form.description}}
+        {% for error in form.description.errors %}
+                <div class="text-danger">{{ error }}</div>
+        {% endfor %}
+    </div>
+    <div class="create-form">
+        {{ form.season}}
+        {% for error in form.season.errors %}
+                <div class="text-danger">{{ error }}</div>
+        {% endfor %}
+    </div>
+    <div class="create-size">
+        <label>{{ form.size.label }}</label>
+            {{ form.size}}
+            {% for error in form.size.errors %}
+                <div class="text-danger">{{ error }}</div>
+            {% endfor %}
+    </div>
+    <div class="create-form">
+        {{ form.category}}
+        {% for error in form.category.errors %}
+                <div class="text-danger">{{ error }}</div>
+        {% endfor %}
+    </div>
+    <div class="create-form">
+        {{ form.type}}
+        {% for error in form.type.errors %}
+                <div class="text-danger">{{ error }}</div>
+        {% endfor %}
+    </div>
+    <div class="create-form">
+        {{ form.brand}}
+        {% for error in form.brand.errors %}
+                <div class="text-danger">{{ error }}</div>
+        {% endfor %}
+        
+    </div>
+    <div class="create-checkbox">
+        {{ form.sale }}
+            <label for="sale_input">{{ form.sale.label }}</label>
+            {% for error in form.sale.errors %}
+                <div class="text-danger">{{ error }}</div>
+            {% endfor %}
+    </div>
+    <div class= "create_button">
+        <button type="submit" >Create</button>
+    </div>
+</form>
+</div>
+
+{% endblock content %}
