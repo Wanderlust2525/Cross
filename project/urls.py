@@ -27,6 +27,8 @@ urlpatterns = [
     path('type/', views.main, name='type'),
     path('all_product/', views.all_product, name='all_product'),
     path('shop/<int:id>/', views.detail_shop, name='detail_shop'),
+    path('login/', views.login_profile, name='login'),
+    path('logout/', views.logout_profile, name='logout'), 
     path('workspace/', include('workspace.urls')),
     path('', views.main, name='main'),
 ]

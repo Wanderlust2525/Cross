@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}| Login{% endblock title %}
+{% block content %}
+<section class= "profile-login">
+    <div class="container">
+        <div class="form-login">
+            <form action="{% url 'login' %}" id="login_form" method="POST" novalidate>
+                {% csrf_token %}
+        
+                <div class="create-form">
+                    {{ form.username }}            
+                        <div class="text-danger">{{ form.username.errors }}</div>            
+                </div>
+                <div class="create-form">
+                    {{ form.password }}           
+                        <div class="text-danger">{{ form.password.errors }}</div>            
+                </div>
+                {% if message %}
+                    <div class="create-form">
+                        <i class="fa-solid fa-circle-exclamation"></i> {{ message }}
+                    </div>
+                {% endif %}
+                <div class= "create_button">
+                    <button type="submit" >Login</button>
+                </div>
+        
+                
+            </form>
+        
+        </div>
+    </div>
+    
+</section>
+
+
+
+
+{% endblock content %}

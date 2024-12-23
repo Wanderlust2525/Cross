@@ -24,8 +24,31 @@
           <img src="{% static 'assets/svg/logo.svg'%}" alt="" />
         </div>
         <div class="cart_favorite">
-          <img class="img1" src="{% static 'assets/svg/cart.svg'%}" alt="" />
-          <a  aria-current="page" href="{% url 'workspace' %}"><img class="img2" src="{% static 'assets/svg/account.svg' %}" alt="" /></a>
+          <a href="{% url 'main' %}" ><img class="img1" src="{% static 'assets/svg/cart.svg'%}" alt="" />
+            
+          </a>
+          <div class="profile-section">
+            
+            <input type="checkbox" id="profileToggle">
+            
+            <label for="profileToggle">
+                <img class="img2" src="{% static 'assets/svg/account.svg' %}" alt="Account">
+            </label>
+            <!-- Всплывающее окно -->
+            <div class="profile-popup">
+                <ul>
+                    {% if request.user.is_authenticated %}
+                    <li><strong>{{ request.user.username }}</strong></li>
+                    <li><a href="{% url 'workspace' %}">Workspace</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="{% url 'logout' %}">Logout</a>
+                    {% else %}
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
           <img class="img3" src="{% static 'assets/svg/favorites.svg'%}" alt="" />
         </div>
       </div>
