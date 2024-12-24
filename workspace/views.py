@@ -1,17 +1,18 @@
 from django.shortcuts import get_object_or_404, render, redirect
 from django.core.paginator import Paginator
 
+from workspace.decorators import is_owner, login_required
 from workspace.forms import ShopForm
 from shop.models import Category, Shops, Type, Brand, Size
 
-
+@login_required(url = '/login/')
 def workspace(request):
-    shop = Shops.objects.all()
+
+    shop = Shops.objects.filter(author=request.user).order_by('-date', 'name')
     
     return render(request, 'workspace/index.html', {'shop': shop,})
 
-
-
+@login_required(url = '/login/')
 def create_cross(request):
     form = ShopForm()
 
@@ -73,7 +74,8 @@ def create_cross(request):
     
     # return render(request, 'workspace/create_cross.html', {'shop': shop, 'types':types, 'categories':categories, 'brands':brands, 'sizes':sizes,})
 
-
+@login_required(url = '/login/')
+@is_owner
 def update_cross(request, id):
 
     shop = get_object_or_404(Shops, id=id)
@@ -157,7 +159,8 @@ def update_cross(request, id):
     
     # return render(request, 'workspace/update_cross.html', {'shops': shops, 'types':types, 'categories':categories, 'brands':brands, 'sizes':sizes,'shop':shop,})
 
-
+@login_required(url = '/login/')
+@is_owner
 def delete_cross(request, id):
     shop = get_object_or_404(Shops, id=id)
 

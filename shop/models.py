@@ -72,6 +72,7 @@ class Shops(models.Model):
 
     type = models.ForeignKey('shop.Type', on_delete=models.CASCADE, related_name='shop', null=True, verbose_name='Тип')
     category = models.ForeignKey('shop.Category', on_delete=models.CASCADE, related_name='shop', null=True, verbose_name='Категории')
+    author = models.ForeignKey('auth.User', on_delete=models.CASCADE, related_name='news', verbose_name='автор',null=True)
     image = models.ImageField(verbose_name='Изображение', upload_to='assets/png/',null=True, blank=True)
     description = models.TextField(verbose_name='Описание')
     views = models.PositiveIntegerField( verbose_name= 'Просмотры', default=0)

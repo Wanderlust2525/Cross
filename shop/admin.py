@@ -13,7 +13,7 @@ admin.site.register(Type)
 
 @admin.register(Shops)
 class ShopsAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'articul','type','brand','category','price','date', 'sale','get_image')
+    list_display = ('id', 'name', 'articul','type','brand','category','price','date', 'sale','get_image', 'author')
     list_display_links = ('id', 'name', 'articul')
     search_fields = [
         'name',
